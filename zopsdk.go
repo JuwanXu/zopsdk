@@ -35,7 +35,7 @@ func (client *Client)Execute(zopRequest ZopRequest) (map[string]interface{},erro
 		bodyParams[k]=valueStr
 	}
 	bodyParams=sortMapByKey(bodyParams)
-	digest,err:=client.sign(zopRequest.MsgType,bodyParams)
+	digest,err:=client.Sign(zopRequest.MsgType,bodyParams)
 	if err!=nil{
 		return nil,err
 	}
