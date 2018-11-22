@@ -68,7 +68,7 @@ func (client *Client)Execute(zopRequest ZopRequest) (map[string]interface{},erro
 
 }
 
-func (client *Client)sign( msgType string, bodyParams  map[string]string)(string,error){
+func (client *Client)Sign( msgType string, bodyParams  map[string]string)(string,error){
 	bytesToDigest, err := json.Marshal(bodyParams)
 	if err!=nil{
 		return "",err
